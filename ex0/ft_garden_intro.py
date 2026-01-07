@@ -1,6 +1,6 @@
 #! /bin/python3.10
 
-def ft_garden_intro():
+def ft_garden_intro() -> None:
     """_summary_
     """
     name = "Coquelicot"
