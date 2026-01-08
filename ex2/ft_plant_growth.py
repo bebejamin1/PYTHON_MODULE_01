@@ -38,14 +38,7 @@ class Flower:
         print(f"{self.name}: {self.height}cm, {self.age_b} days old")
 
 
-def ft_plant_growth() -> None:
-    """
-    Summury:
-        Create a flower using the Flower class.
-        Use age() and grow() to modify the plant's information.
-        Display its information before and after growth.
-        Distinguish between before and after.
-    """
+if __name__ == "__main__":
     print("Day 1".center(20, "-"))
     flower = Flower(name="Rose", height=25, age_b=30)
     original = flower.height
@@ -58,6 +51,3 @@ def ft_plant_growth() -> None:
     Flower.get_info(flower)
     stat = flower.height - original
     print(f"Growth this week: +{stat}cm")
-
-
-# ft_plant_growth()

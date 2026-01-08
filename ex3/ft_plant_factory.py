@@ -1,6 +1,8 @@
 #! /bin/python3.10
 
 class Flower:
+    plant_count = 0
+
     def __init__(self, name: str, height: int, age_b: int) -> None:
         """
         Summury:
@@ -15,51 +17,15 @@ class Flower:
         self.name = name
         self.height = height
         self.age_b = age_b
-
-    def creat_flower(self, name_f: str, height_f: int, age_b_f: int) -> None:
-        self.name = name_f
-        self.height = height_f
-        self.age_b = age_b_f
-
-    def age(self) -> None:
-        """
-        Summury:
-            Increases age
-        """
-        self.age_b += 1
-
-    def grow(self) -> None:
-        """
-        Summury:
-            Increases height
-        """
-        self.height += 1
-
-    def get_info(self) -> None:
-        """
-        Summury:
-            Displays plant information
-        """
-        print(f"{self.name}: {self.height}cm, {self.age_b} days old")
+        Flower.plant_count += 1
+        print(f"Created: {self.name} ({self.height}cm, {self.age_b} days)")
 
 
-def ft_plant_factory():
-    """
-    Summury:
-        Create a flower using the Flower class.
-        Use age() and grow() to modify the plant's information.
-        Display its information before and after growth.
-        Distinguish between before and after.
-    """
-    days = 1
-    print(f"Day {days}".center(20, "-"))
-    flower = Flower.creat_flower("Tulipe", 12, 20)
-    Flower.get_info(flower)
-    for days in range(2, 8):
-        Flower.age(flower)
-        Flower.grow(flower)
-    print("\n" + f"Day {days}".center(20, "-"))
-    Flower.get_info(flower)
-
-
-ft_plant_factory()
+if __name__ == "__main__":
+    print(" Plant Factory Output ".center(50, "="))
+    flower_1 = Flower(name="Tulip", height=15, age_b=12)
+    flower_2 = Flower(name="Rose", height=23, age_b=11)
+    flower_3 = Flower(name="Daisy", height=12, age_b=14)
+    flower_4 = Flower(name="bollockwort", height=36, age_b=62)
+    flower_5 = Flower(name="Daffodil", height=28, age_b=51)
+    print("\n" + f"Total plants created: {Flower.plant_count}")
