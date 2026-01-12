@@ -1,16 +1,16 @@
 #! /bin/python3.10
 
 class Plant:
-    def __init__(self, name: str, height: int, age: int) -> object:
+    def __init__(self, name: str, height: int, age: int) -> None:
         """
         Summury:
             Initializes attributes corresponding to Plant information in
             a class to bring all the data together.
 
         Args:
-            name (str): Plant name
-            height (int): Plant size (in centimeters)
-            age (int): Plant age (in days)
+            name (str): Plant name.
+            height (int): Plant size (in centimeters).
+            age (int): Plant age (in days).
         """
         self.name = name
         self.age = age
@@ -18,7 +18,18 @@ class Plant:
 
 
 class Flower(Plant):
-    def __init__(self, name: str, height: int, age: int, color: str) -> object:
+    def __init__(self, name: str, height: int, age: int, color: str) -> None:
+        """
+        Summury:
+            Initializes attributes corresponding to Plant and Flower
+            information in a class to bring all the data together.
+
+        Args:
+            name (str): Same name as Plant.
+            height (int): Same height as Plant.
+            age (int): Same age as Plant.
+            color (str): flower color.
+        """
         super().__init__(name, height, age)
 
         self.color = color
@@ -27,6 +38,10 @@ class Flower(Plant):
               f" {self.color} color")
 
     def bloom(self) -> None:
+        """
+        Summury:
+            state of blooming.
+        """
         if (self.height <= 20):
             print(f"{self.name} is in the throes of adolescence.")
         elif (self.height > 20 and self.height <= 40):
@@ -39,7 +54,18 @@ class Flower(Plant):
 
 class Tree(Plant):
     def __init__(self, name: str, height: int, age: int,
-                 trunk_diameter: int) -> object:
+                 trunk_diameter: int) -> None:
+        """
+        Summury:
+            Initializes attributes corresponding to Plant and Tree
+            information in a class to bring all the data together.
+
+        Args:
+            name (str): Same name as Plant
+            height (int): Same height as Plant
+            age (int): Same age as Plant
+            trunk_diameter (int): diameter of the tree trunk
+        """
         super().__init__(name, height, age)
 
         self.trunk_diameter = trunk_diameter
@@ -48,6 +74,10 @@ class Tree(Plant):
               f" {self.trunk_diameter}cm diameter")
 
     def produce_shade(self) -> None:
+        """
+        Summury:
+            shadow surface.
+        """
         print(f"{self.name} provides"
               f" {round((self.trunk_diameter * self.height) / 42)}"
               " square meters of shade")
@@ -55,7 +85,19 @@ class Tree(Plant):
 
 class Vegetable(Plant):
     def __init__(self, name: str, height: int, age: int, harvest_season: str,
-                 nutritional_value: str) -> object:
+                 nutritional_value: str) -> None:
+        """
+        Summury:
+            Initializes attributes corresponding to Plant and Vegetable
+            information in a class to bring all the data together.
+
+        Args:
+            name (str): Same name as Plant.
+            height (int): Same height as Plant.
+            age (int): Same age as Plant.
+            harvest_season (str): flowering season.
+            nutritional_value (str): nutritional value of legumes.
+        """
         super().__init__(name, height, age)
 
         self.harvest_season = harvest_season
