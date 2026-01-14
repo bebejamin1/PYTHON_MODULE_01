@@ -70,7 +70,7 @@ class SecurePlant:
 if __name__ == "__main__":
     print(" Garden Security System ".center(50, "="))
 # ============= Garden Security System =============
-    flower_1 = SecurePlant(name="Rose")
+    flower_1 = SecurePlant("Rose")
     print(f"Plant created: {flower_1.name}")
     flower_1.set_height(12)
     flower_1.set_age(20)
