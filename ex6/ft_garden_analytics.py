@@ -10,8 +10,8 @@ class SecurePlant:
         Args:
             name (str): flower name
         """
-        self.name = name.capitalize()
-        self.__age_b = 0
+        self.name = name
+        self.__age = 0
         self.__height = 0
 
     def get_height(self) -> int:
@@ -32,7 +32,7 @@ class SecurePlant:
         Returns:
             int: flower age (in days)
         """
-        return self.__age_b
+        return self.__age
 
     def set_height(self, height: int) -> None:
         """
@@ -50,7 +50,7 @@ class SecurePlant:
             self.__height = height
             print(f"Height updated: {self.__height}cm [OK]")
 
-    def set_age(self, age_b: int) -> None:
+    def set_age(self, age: int) -> None:
         """
         Summury:
             Check that the flower age is positive,
@@ -59,29 +59,23 @@ class SecurePlant:
         Args:
             height (int): flower age (in days)
         """
-        if age_b < 0:
-            print(f"Invalid operation attempted: age {age_b}days [REJECTED]")
+        if age < 0:
+            print(f"Invalid operation attempted: age {age}days [REJECTED]")
             print("Security: Negative age rejected")
         else:
-            self.__age_b = age_b
-            print(f"Age updated: {self.__age_b} days [OK]")
+            self.__age = age
+            print(f"Age updated: {self.__age} days [OK]")
 
+        class GardenStats():
+            total_garden = 0
+
+
+
+class Plant:
+    
 
 if __name__ == "__main__":
-    print(" Garden Security System ".center(50, "="))
-# ============= Garden Security System =============
-    flower_1 = SecurePlant(name="Rose")
-    print(f"Plant created: {flower_1.name}")
-    flower_1.set_height(12)
-    flower_1.set_age(20)
-    print("\n" + " Error Test ".center(50, "="))
-# ========== direct modif, does not work ===========
-    flower_1.__height = 42
-    flower_1.__age_b = 42
-# =================== Error Test ===================
-    flower_1.set_height(-12)
-    flower_1.set_age(-90)
-# ================= Current Plant ==================
-    print("\n" + "".center(50, "="))
-    print(f"Current plant: {flower_1.name}", end=" ")
-    print(f"({flower_1.get_height()}cm, {flower_1.get_age()} days)")
+    print(" Garden Management System Demo ".center("=", 50))
+# ============= Garden Plant Types =============
+# =================== Flower ===================
+    print("ahahaha")

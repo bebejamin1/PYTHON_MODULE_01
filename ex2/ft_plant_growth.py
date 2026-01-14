@@ -12,7 +12,7 @@ class Flower:
             height (int): flower size (in centimeters)
             age (int): flower age (in days)
         """
-        self.name = name
+        self.name = name.capitalize()
         self.height = height
         self.age_b = age_b
 

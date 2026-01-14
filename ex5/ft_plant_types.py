@@ -12,7 +12,7 @@ class Plant:
             height (int): Plant size (in centimeters).
             age (int): Plant age (in days).
         """
-        self.name = name
+        self.name = name.capitalize()
         self.age = age
         self.height = height
 
