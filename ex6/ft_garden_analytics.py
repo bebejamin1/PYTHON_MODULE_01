@@ -3,11 +3,9 @@
 class SecurePlant:
     __total_plant = 0
 
-    @staticmethod
     def get_total() -> int:
         return (SecurePlant.__total_plant)
 
-    @staticmethod
     def set_total(plant: int) -> None:
         SecurePlant.__total_plant = plant + SecurePlant.get_total()
 
@@ -210,14 +208,22 @@ if (__name__ == "__main__"):
     Bob, Alice = GardenManager.create_garden_network(["Bob", "Alice"])
 # ============= Garden Plant Types =============
     print(" Garden Management System Demo ".center(50, "=") + "\n")
+# ============= Create Alice Garden =============
     Alice.add_to_garden(SecurePlant("Oak Tree", 380, 100))
     Alice.add_to_garden(FloweringPlant("Rose", 25, 25, "red", "blooming"))
     Alice.add_to_garden(PrizeFlower("Sunflower", 50, 50, "yellow",
                                     "blooming", 10))
+# ============= Create Bob Garden =============
+    Bob.add_to_garden(FloweringPlant("Pine", 500, 50, "green", "blooming"))
+    Bob.add_to_garden(SecurePlant("spruce", 500, 50))
+    Bob.add_to_garden(SecurePlant("sprud", 500, 50))
+    Bob.add_to_garden(SecurePlant("spru", 500, 50))
+    Bob.add_to_garden(PrizeFlower("Daisy", 30, 30, "white", "blooming", 3))
+# ================ Grow plant ================
     print("")
     Alice.grow_all()
     print("")
-    # ========== Alice's Garden Report ==========
+# ========== Alice's Garden Report ==========
     print(" Alice's Garden Report ".center(50, "=") + "\n")
     Alice.garden_info()
     print("")
